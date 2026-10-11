@@ -39,6 +39,13 @@ The following files are written by the script to `R/`:
 | `Table_OMIM_Drug_Integrated.csv` | Integrated phenotype-gene-drug records with drug description, ATC annotations, and the text-based pain/analgesia label. |
 | `Table_OMIM_Drug_Integrated_short_unique.csv` | One row per drug with its name and pain/analgesia annotation. |
 
+## Further CSV results
+
+The following files are not written by the script but created manually follwoing PubMed search:
+
+| File | Contents |
+| --- | --- |
+| `pubmed_screening_complete.csv` | Assignment of each record with drug, category, type of evidence |
 
 ## Reader and reviewer note
 
