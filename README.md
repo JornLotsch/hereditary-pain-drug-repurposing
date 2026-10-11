@@ -39,7 +39,6 @@ The following files are written by the script to `R/`:
 | `Table_OMIM_Drug_Integrated.csv` | Integrated phenotype-gene-drug records with drug description, ATC annotations, and the text-based pain/analgesia label. |
 | `Table_OMIM_Drug_Integrated_short_unique.csv` | One row per drug with its name and pain/analgesia annotation. |
 
-These tables are generated locally by the script. The workspace `.gitignore` excludes CSV files, so they will not be included in a GitHub checkout unless they are explicitly added to the repository.
 
 ## Reader and reviewer note
 
