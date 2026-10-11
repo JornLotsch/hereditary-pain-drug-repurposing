@@ -1,18 +1,16 @@
 # Existing drugs targeting genes of hereditary pain syndromes as candidates for analgesic repurposing
 
-This repository accompanies the scientific report **"Existing drugs targeting genes of hereditary pain syndromes as candidates for analgesic repurposing: a computational knowledge discovery analysis."** It provides the R workflow and its tabular outputs; the report remains the primary source for the study rationale, methods, interpretation, and limitations.
+This repository is the computational companion to the manuscript **"Existing drugs targeting genes of hereditary pain syndromes as candidates for analgesic repurposing: a computational knowledge discovery analysis."** It provides the R workflow and its tabular outputs; the manuscript remains the source for the study rationale, methods, interpretation, and limitations.
 
-**Suggested citation:** Jörn Lötsch, André Himmelspach, and Dario Kringel. *Existing drugs targeting genes of hereditary pain syndromes as candidates for analgesic repurposing: a computational knowledge discovery analysis* (in preparation).
+## Analysis
+
+The analysis is implemented in [R/omim_drugbank.R](R/omim_drugbank.R). It links OMIM phenotype entries with a known molecular basis to human genes, then identifies approved or investigational DrugBank compounds that target those genes. The script integrates phenotype, gene, drug, and ATC classification data and labels whether pain-, analgesia-, or anesthesia-related terms appear in a drug description or ATC label. This text-based label is not evidence of an approved analgesic indication or clinical efficacy.
+
+The analysis used an OMIM text-search export and DrugBank full database XML (version 5.1.14). These source files are not included. Obtain them from OMIM and DrugBank under their respective terms; DrugBank XML must not be redistributed. Edit the file paths and `BASE_PATH` in the configuration section of the R script for your local setup.
 
 ![Chord diagram linking OMIM phenotypes, genes, drugs, ATC therapeutic areas, and pain annotation](R/OMIM_Drug_Chord.svg)
 
 *Figure. Connections between OMIM phenotype entries, genes, drugs, ATC anatomical main groups, and the pain/analgesia text annotation. Node colors indicate category: red, OMIM phenotype; blue, gene; green, drug; orange, ATC group; purple, pain/analgesia annotation. Connections represent database-derived associations, not evidence that a drug treats pain.*
-
-## Analysis
-
-The analysis is implemented in [`R/omim_drugbank.R`](R/omim_drugbank.R). It links OMIM phenotype entries with a known molecular basis to human genes, then identifies approved or investigational DrugBank compounds that target those genes. The script integrates phenotype, gene, drug, and ATC classification data and labels whether pain-, analgesia-, or anesthesia-related terms appear in a drug description or ATC label. This text-based label is not evidence of an approved analgesic indication or clinical efficacy.
-
-The analysis used an OMIM text-search export and DrugBank full database XML (version 5.1.14). These source files are not included. Obtain them from OMIM and DrugBank under their respective terms; DrugBank XML must not be redistributed. Edit the file paths and `BASE_PATH` in the configuration section of the R script for your local setup.
 
 ## Running the script
 
@@ -41,11 +39,11 @@ The following files are written by the script to `R/`:
 
 ## Further CSV results
 
-The following files are not written by the script but created manually follwoing PubMed search:
+The following files are not written by the script but created manually following PubMed search:
 
 | File | Contents |
 | --- | --- |
-| `pubmed_screening_complete.csv` | Assignment of each record with drug, category, type of evidence |
+| `pubmed_screening_complete.csv` | Assignment of each record with drug, category, and type of evidence. |
 
 ## Reader and reviewer note
 
