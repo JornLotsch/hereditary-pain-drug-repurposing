@@ -47,7 +47,7 @@ The following files are not written by the script but created manually following
 
 ## PubMed search strategy
 
-The following query was used for the PubMed search underlying the manual screening on October 12, 2026. For full reproducibility, also report any PubMed filters used.
+The following query was used for the PubMed search underlying the manual screening on October 11, 2026. For full reproducibility, also report any PubMed filters used.
 
 <details>
 <summary>Search query</summary>
