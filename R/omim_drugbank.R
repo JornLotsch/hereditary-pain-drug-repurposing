@@ -1050,3 +1050,87 @@ message("Note: Sequential flow is less clear than in Sankey/parallel sets.")
 #                       ignore.case = TRUE)) %>%
 #   dplyr::distinct(drug_name, atc_level_2)
 
+#################################### Literature check: evidence per drug ########################################################
+# Plots the category 1 records of the PubMed screening (pubmed_screening_complete.csv)
+# per drug, stacked by type of evidence. The CSV is not produced by this script; it
+# holds the record-level results of the literature check and is expected in PATH_R.
+# PLOT_DRUG_SET: "human" = only drugs with category 1 evidence from humans
+#                          (controlled clinical, uncontrolled clinical, or volunteer studies);
+#                "all"   = all drugs with category 1 evidence, in two panels by tier.
+
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(ggplot2)
+  library(viridisLite)
+})
+
+FILE_SCREENING <- file.path(PATH_R, "pubmed_screening_complete.csv")
+PLOT_DRUG_SET  <- "human"   # "human" or "all"
+X_CAP          <- 50        # axis cap; longer bars are truncated and labelled with their total
+
+check_file_exists(FILE_SCREENING, "PubMed screening table")
+screening <- read.csv(FILE_SCREENING, stringsAsFactors = FALSE)
+
+evidence_levels <- c(CC = "Controlled clinical",
+                     CU = "Uncontrolled clinical",
+                     HV = "Human volunteers",
+                     PC = "Preclinical",
+                     RV = "Review")
+human_codes <- c("CC", "CU", "HV")
+
+cat1 <- screening %>%
+  dplyr::filter(category == 1, evidence_code %in% names(evidence_levels))
+
+drug_tier <- cat1 %>%
+  dplyr::group_by(drug) %>%
+  dplyr::summarise(n_human = sum(evidence_code %in% human_codes),
+                   n_total = dplyr::n(), .groups = "drop") %>%
+  dplyr::mutate(tier = dplyr::if_else(n_human > 0, "Human data", "Preclinical or review only"))
+
+if (PLOT_DRUG_SET == "human") {
+  drug_tier <- dplyr::filter(drug_tier, tier == "Human data")
+}
+
+message(sprintf("Literature check plot: %d drugs (%s)", nrow(drug_tier), PLOT_DRUG_SET))
+
+plot_lit <- cat1 %>%
+  dplyr::inner_join(drug_tier, by = "drug") %>%
+  dplyr::count(drug, tier, n_human, n_total, evidence_code, name = "n") %>%
+  dplyr::mutate(
+    evidence = factor(evidence_levels[evidence_code], levels = rev(evidence_levels)),
+    drug = factor(drug, levels = drug_tier %>%
+                    dplyr::arrange(n_human, n_total) %>%
+                    dplyr::pull(drug))
+  )
+
+labels_trunc <- drug_tier %>%
+  dplyr::filter(n_total > X_CAP) %>%
+  dplyr::mutate(label = paste0("n = ", n_total, " \u2192"))
+
+p_lit <- ggplot(plot_lit, aes(x = n, y = drug, fill = evidence)) +
+  geom_col(width = 0.75, color = "white", linewidth = 0.2) +
+  geom_text(data = labels_trunc, aes(x = X_CAP, y = drug, label = label),
+            inherit.aes = FALSE, hjust = 1.05, size = 3, color = "white", fontface = "bold") +
+  scale_fill_manual(values = setNames(viridisLite::viridis(length(evidence_levels), option = "D", end = 0.95),
+                                      evidence_levels),
+                    breaks = evidence_levels, name = "Type of evidence") +
+  coord_cartesian(xlim = c(0, X_CAP), expand = FALSE) +
+  labs(x = "Records reporting an analgesic or antinociceptive effect (category 1)", y = NULL) +
+  theme_minimal(base_size = 11) +
+  theme(panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom")
+
+if (PLOT_DRUG_SET == "all") {
+  p_lit <- p_lit + facet_grid(tier ~ ., scales = "free_y", space = "free_y")
+}
+
+print(p_lit)
+
+plot_height <- if (PLOT_DRUG_SET == "all") 12 else 5.5
+ggsave(file.path(PATH_R, paste0("Literature_Evidence_", PLOT_DRUG_SET, ".svg")),
+       p_lit, width = 8, height = plot_height)
+ggsave(file.path(PATH_R, paste0("Literature_Evidence_", PLOT_DRUG_SET, ".png")),
+       p_lit, width = 8, height = plot_height, dpi = 300)
+message(sprintf("  - Saved: Literature_Evidence_%s.pdf/.png", PLOT_DRUG_SET))
+

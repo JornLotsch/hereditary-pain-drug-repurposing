@@ -1,6 +1,6 @@
 PMID,year,drug,category,evidence_code,code_meaning,note,title,journal,screening_round
-39381601,2024,(unmatched),3,I,incidental,,"Rapid identification of primary atopic disorders (PAD) by a clinical  landmark-guided, upfront use of genomic sequencing.",Allergol Select,round1
-42090166,2026,(unmatched),3,I,incidental,,Ketamine Infusions and Rapid Reduction of Suicidal and Depressive Symptoms in  Major Depressive Episode: A Systematic Review and Meta-Analysis.,JAMA Psychiatry,round1
+39381601,2024,unassigned,3,I,incidental,,"Rapid identification of primary atopic disorders (PAD) by a clinical  landmark-guided, upfront use of genomic sequencing.",Allergol Select,round1
+42090166,2026,unassigned,3,I,incidental,,Ketamine Infusions and Rapid Reduction of Suicidal and Depressive Symptoms in  Major Depressive Episode: A Systematic Review and Meta-Analysis.,JAMA Psychiatry,round1
 37142001,2023,Acamprosate,1,PC,preclinical,reduced neuropathic pain after CCI in rats,Acamprosate effect on neuropathic pain in rats: With emphasis on the role of  ERK/MAPK pathway and SCN9A sodium channel.,J Chem Neuroanat,round2
 32230770,2020,Acamprosate,2,PC,preclinical,combination product with ribavirin (NeuroHeal) reduced neuropathic pain in rats,NeuroHeal Treatment Alleviates Neuropathic Pain and Enhances Sensory Axon  Regeneration.,Cells,round2
 19319508,2009,Acamprosate,3,N,no pain outcome,,The effects of acamprosate on alcohol-cue reactivity and alcohol priming in  dependent patients: a randomized controlled trial.,Psychopharmacology (Berl),round2
@@ -3664,21 +3664,21 @@ PMID,year,drug,category,evidence_code,code_meaning,note,title,journal,screening_
 27721044,2017,Zonisamide,3,I,incidental,docking study,Potential role of selected antiepileptics used in neuropathic pain as human GABA  transporter isoform 1 (GAT1) inhibitors-Molecular docking and pharmacodynamic studies.,Eur J Pharm Sci,round1
 34204137,2021,Zonisamide,3,O,other compound/name overlap/unspecific,,Glycine Receptors in Spinal Nociceptive Control-An Update.,Biomolecules,round1
 15660766,2005,Zonisamide,3,P,pain as adverse effect/pronociceptive,epilepsy RCT; headache listed as adverse event,"Dose-dependent safety and efficacy of zonisamide: a randomized, double-blind,  placebo-controlled study in patients with refractory partial seizures.",Epilepsia,round1
-7183022,1982,ZZ?,3,O,other compound/name overlap/unspecific,,Pelvic actinomycosis and usage of intrauterine contraceptive devices.,Yale J Biol Med,round2
-8162713,1994,ZZ?,3,O,other compound/name overlap/unspecific,,The pathology of intra-uterine contraceptive devices.,Curr Top Pathol,round2
-8972496,1996,ZZ?,3,O,other compound/name overlap/unspecific,,IUDs: a state of the art conference. Introduction.,Obstet Gynecol Surv,round2
-11430440,2001,ZZ?,3,O,other compound/name overlap/unspecific,,Low intensity monochromatic infrared therapy: a preliminary study of the effects  of a novel treatment unit upon experimental muscle soreness.,Lasers Surg Med,round2
-18366084,2008,ZZ?,3,O,other compound/name overlap/unspecific,,Pneumatic skin flattening reduces pain during laser hair reduction.,Lasers Surg Med,round2
-19712025,2010,ZZ?,3,O,other compound/name overlap/unspecific,,Low- and high-intensity lasers in the treatment of herpes simplex virus 1  infection.,Photomed Laser Surg,round2
-21119408,2010,ZZ?,3,O,other compound/name overlap/unspecific,,Management of myofascial pain: low-level laser therapy versus occlusal splints.,J Craniofac Surg,round2
-24284128,2013,ZZ?,3,O,other compound/name overlap/unspecific,,"Correlations between photoactivable porphyrins' fluorescence, erythema and the  pain induced by PDT on normal skin using ALA-derivatives.",Photodiagnosis Photodyn Ther,round2
-29036248,2017,ZZ?,3,O,other compound/name overlap/unspecific,,Apremilast and Narrowband Ultraviolet-B Combination Therapy for Treating  Moderate-to-Severe Plaque Psoriasis.,J Drugs Dermatol,round2
-30366012,2019,ZZ?,3,O,other compound/name overlap/unspecific,,Intrathecal administration of adrenomedullin induces mechanical allodynia and  neurochemical changes in spinal cord and DRG.,Neurosci Lett,round2
-30411797,2019,ZZ?,3,O,other compound/name overlap/unspecific,,Effects of Photobiomodulation on Functionality in Wistar Rats with Sciatic Nerve  Injury.,Photochem Photobiol,round2
-31577342,2019,ZZ?,3,O,other compound/name overlap/unspecific,,Association of Antidepressant Use With Adverse Health Outcomes: A Systematic  Umbrella Review.,JAMA Psychiatry,round2
-32738748,2020,ZZ?,3,O,other compound/name overlap/unspecific,,Laser-photobiomodulation on experimental cancer pain model in Walker Tumor-256.,J Photochem Photobiol B,round2
-34775517,2022,ZZ?,3,O,other compound/name overlap/unspecific,,Dentinal tubule blockage using nanobioglass in the presence of diode (980 nm) and  Nd:YAG lasers: an in vitro study.,Clin Oral Investig,round2
-36880280,2023,ZZ?,3,O,other compound/name overlap/unspecific,,Development and evaluation of Hedyotis corymbosa (L.) extract containing  phytosomes: a preclinical approach for treatment of neuropathic pain in rodent model.,J Microencapsul,round2
-37648266,2023,ZZ?,3,O,other compound/name overlap/unspecific,,Balancing risks and benefits of cannabis use: umbrella review of meta-analyses of  randomised controlled trials and observational studies.,BMJ,round2
-40592080,2025,ZZ?,3,O,other compound/name overlap/unspecific,,"Photobiomodulation presents an anti-inflammatory effect, reflecting on the  expression of receptors related to the pain process in a collagenase-induced tendinitis experimental model.",J Photochem Photobiol B,round2
-40403779,2025,ZZ?,3,O,other compound/name overlap/unspecific,,Temporal Trends in Opioid Use and Associated Outcomes for Patients Living with  Advanced Cancer.,J Pain Symptom Manage,round2
+7183022,1982,unassigned,3,O,other compound/name overlap/unspecific,,Pelvic actinomycosis and usage of intrauterine contraceptive devices.,Yale J Biol Med,round2
+8162713,1994,unassigned,3,O,other compound/name overlap/unspecific,,The pathology of intra-uterine contraceptive devices.,Curr Top Pathol,round2
+8972496,1996,unassigned,3,O,other compound/name overlap/unspecific,,IUDs: a state of the art conference. Introduction.,Obstet Gynecol Surv,round2
+11430440,2001,unassigned,3,O,other compound/name overlap/unspecific,,Low intensity monochromatic infrared therapy: a preliminary study of the effects  of a novel treatment unit upon experimental muscle soreness.,Lasers Surg Med,round2
+18366084,2008,unassigned,3,O,other compound/name overlap/unspecific,,Pneumatic skin flattening reduces pain during laser hair reduction.,Lasers Surg Med,round2
+19712025,2010,unassigned,3,O,other compound/name overlap/unspecific,,Low- and high-intensity lasers in the treatment of herpes simplex virus 1  infection.,Photomed Laser Surg,round2
+21119408,2010,unassigned,3,O,other compound/name overlap/unspecific,,Management of myofascial pain: low-level laser therapy versus occlusal splints.,J Craniofac Surg,round2
+24284128,2013,unassigned,3,O,other compound/name overlap/unspecific,,"Correlations between photoactivable porphyrins' fluorescence, erythema and the  pain induced by PDT on normal skin using ALA-derivatives.",Photodiagnosis Photodyn Ther,round2
+29036248,2017,unassigned,3,O,other compound/name overlap/unspecific,,Apremilast and Narrowband Ultraviolet-B Combination Therapy for Treating  Moderate-to-Severe Plaque Psoriasis.,J Drugs Dermatol,round2
+30366012,2019,unassigned,3,O,other compound/name overlap/unspecific,,Intrathecal administration of adrenomedullin induces mechanical allodynia and  neurochemical changes in spinal cord and DRG.,Neurosci Lett,round2
+30411797,2019,unassigned,3,O,other compound/name overlap/unspecific,,Effects of Photobiomodulation on Functionality in Wistar Rats with Sciatic Nerve  Injury.,Photochem Photobiol,round2
+31577342,2019,unassigned,3,O,other compound/name overlap/unspecific,,Association of Antidepressant Use With Adverse Health Outcomes: A Systematic  Umbrella Review.,JAMA Psychiatry,round2
+32738748,2020,unassigned,3,O,other compound/name overlap/unspecific,,Laser-photobiomodulation on experimental cancer pain model in Walker Tumor-256.,J Photochem Photobiol B,round2
+34775517,2022,unassigned,3,O,other compound/name overlap/unspecific,,Dentinal tubule blockage using nanobioglass in the presence of diode (980 nm) and  Nd:YAG lasers: an in vitro study.,Clin Oral Investig,round2
+36880280,2023,unassigned,3,O,other compound/name overlap/unspecific,,Development and evaluation of Hedyotis corymbosa (L.) extract containing  phytosomes: a preclinical approach for treatment of neuropathic pain in rodent model.,J Microencapsul,round2
+37648266,2023,unassigned,3,O,other compound/name overlap/unspecific,,Balancing risks and benefits of cannabis use: umbrella review of meta-analyses of  randomised controlled trials and observational studies.,BMJ,round2
+40592080,2025,unassigned,3,O,other compound/name overlap/unspecific,,"Photobiomodulation presents an anti-inflammatory effect, reflecting on the  expression of receptors related to the pain process in a collagenase-induced tendinitis experimental model.",J Photochem Photobiol B,round2
+40403779,2025,unassigned,3,O,other compound/name overlap/unspecific,,Temporal Trends in Opioid Use and Associated Outcomes for Patients Living with  Advanced Cancer.,J Pain Symptom Manage,round2
